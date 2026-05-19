@@ -22,11 +22,11 @@ public class program {
         people.add(new Person("Chris", "Juan", 27));
 
 
-        //Promoting the user for name search
+        //Prompting the user for name search
         System.out.println("Enter first/last name: ");
         String name = scanner.nextLine();
 
-
+        //Displaying the name chosen by the user
         boolean found = false;
         for (Person person : people) {
             if (name.equals(person.getFirstName()) || name.equals(person.getLastName())) {
@@ -38,6 +38,39 @@ public class program {
         if(!found) {
             System.out.println("Name not found");
         }
+
+        System.out.println("=============================");
+
+        //Calculating average people
+        int totalAge = 0;
+        for (Person person : people) {
+            totalAge += person.getAge();
+        }
+        int average = totalAge / people.size();
+        System.out.println("Average age of people: " + average);
+
+
+        //Calculating Oldest person
+        Person oldest = people.get(0);
+        for (Person person : people) {
+            if (person.getAge() > oldest.getAge()) {
+                oldest = person;
+            }
+
+        }
+        System.out.println("Oldest person: " + oldest);
+
+
+        //Calculating youngest person
+        Person youngest = people.get(0);
+        for (Person person : people) {
+            if (person.getAge() < youngest.getAge()) {
+                youngest = person;
+            }
+
+        }
+        System.out.println("Youngest person: " + youngest);
+
 
 
 
