@@ -1,4 +1,7 @@
 package com.pluralsight.Loops;
+
+import com.pluralsight.Person;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

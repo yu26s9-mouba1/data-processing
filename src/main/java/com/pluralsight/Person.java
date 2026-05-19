@@ -1,4 +1,4 @@
-package com.pluralsight.Loops;
+package com.pluralsight;
 
 public class Person {
 
